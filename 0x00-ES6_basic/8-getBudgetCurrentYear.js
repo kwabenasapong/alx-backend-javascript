@@ -4,14 +4,11 @@ function getCurrentYear() {
 }
 
 export default function getBudgetForCurrentYear(income, gdp, capita) {
-  const budget = new Map();
-
-  /* budget[`income-${getCurrentYear()}`] = income;
-  budget[`gdp-${getCurrentYear()}`] = gdp;
-  budget[`capita-${getCurrentYear()}`] = capita; */
-  budget.set(`income-${getCurrentYear()}`, income);
-  budget.set(`gdp-${getCurrentYear()}`, gdp);
-  budget.set(`capita-${getCurrentYear()}`, capita);
+  const budget = {
+    [`income-${getCurrentYear()}`]: income,
+    [`gdp-${getCurrentYear()}`]: gdp,
+    [`capita-${getCurrentYear()}`]: capita,
+  };
 
   return budget;
 }
