@@ -3,12 +3,11 @@ const trueBool = { status: 200, body: 'Success' };
 
 export default function handleResponseFromAPI(promise) {
   return new Promise((resolve, reject) => {
+    console.log('Got a response from the API');
     // eslint-disable-next-line no-constant-condition
     if (promise) {
-      resolve(trueBool);
-    } else {
-      reject(new Error());
+      return resolve(trueBool);
     }
-    console.log('Got a response from the API');
+    return reject(new Error());
   });
 }
