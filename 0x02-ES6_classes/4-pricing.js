@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Currency from './3-currency';
 
 export default class Pricing {
@@ -26,7 +27,7 @@ export default class Pricing {
     return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
-  static convertPrice(conversionRate) {
-    return (this._amount * conversionRate);
+  static convertPrice(amount, conversionRate) {
+    return (amount * conversionRate);
   }
 }
