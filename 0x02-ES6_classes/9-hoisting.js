@@ -8,16 +8,8 @@ export class HolbertonClass {
     return this._year;
   }
 
-  set year(newYear) {
-    this._year = newYear;
-  }
-
   get location() {
     return this._location;
-  }
-
-  set location(newLocation) {
-    this._location = newLocation;
   }
 }
 
@@ -28,28 +20,12 @@ export class StudentHolberton {
     this._holbertonClass = holbertonClass;
   }
 
-  get firstName() {
-    return this._firstName;
-  }
-
-  get lastName() {
-    return this._lastName;
+  get fullName() {
+    return `${this._firstName} ${this._lastName}`;
   }
 
   get holbertonClass() {
     return this.holbertonClass;
-  }
-
-  set firstName(newFirstName) {
-    this._firstName = newFirstName;
-  }
-
-  set lastName(newLastName) {
-    this._lastName = newLastName;
-  }
-
-  set holbertonClass(newHolbertonClass) {
-    this._holbertonClass = newHolbertonClass;
   }
 
   get fullStudentDescription() {
