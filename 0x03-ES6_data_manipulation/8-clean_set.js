@@ -1,5 +1,6 @@
 export default function cleanSet(set, startString) {
-  if (startString !== undefined && startString.length !== 0) {
+  // eslint-disable-next-line max-len
+  if (startString !== undefined && startString.length !== 0 && set.size !== 0 && startString.length <= set.size) {
     const selected = [...set].filter((value) => value.startsWith(startString));
     let finalStr = '';
     for (const str of selected) {
