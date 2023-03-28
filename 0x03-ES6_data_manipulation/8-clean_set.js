@@ -1,4 +1,3 @@
-/* eslint-disable consistent-return */
 export default function cleanSet(set, startString) {
   if (startString) {
     const selected = [...set].filter((value) => value.startsWith(startString));
@@ -9,4 +8,6 @@ export default function cleanSet(set, startString) {
     }
     return finalStr.slice(0, -1);
   }
+
+  return '';
 }
