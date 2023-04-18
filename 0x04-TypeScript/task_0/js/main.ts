@@ -17,7 +17,7 @@ interface Student {
   location: string;
 }
 
-let student1: Student ={
+let student1: Student = {
   firstName: "Koby",
   lastName: "Sap",
   age: 20,
