@@ -19,6 +19,9 @@ function countStudents(path) {
     const lines = data.split('\n');
     lines.shift();
     let count = lines.length;
+    if (lines[lines.length - 1] === '') {
+      count -= 1;
+    }
     console.log(`Number of students: ${count}`);
     const fields = {};
     for (const line of lines) {

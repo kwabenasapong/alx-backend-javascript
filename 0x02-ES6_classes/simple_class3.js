@@ -48,16 +48,16 @@ class Person {
   }
 }
 
-const person1 = new Person("John", "Doe", 30);
-const person2 = new Person("Jane", "Doe", 25);
+const person1 = new Person('John', 'Doe', 30);
+const person2 = new Person('Jane', 'Doe', 25);
 
 person1.mySelf();
 person2.mySelf();
 
 console.log(Person.count);
 
-person1.firstName = "Johnathan";
-person1.lastName = "Doe";
+person1.firstName = 'Johnathan';
+person1.lastName = 'Doe';
 person1.age = 31;
 
 person1.mySelf();

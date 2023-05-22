@@ -9,27 +9,27 @@ Requirements:
 When running, Webpack should return No type errors found.
 Every variable should use TypeScript when possible. */
 let student1 = {
-    firstName: "John",
-    lastName: "Doe",
+    firstName: 'John',
+    lastName: 'Doe',
     age: 25,
-    location: "New York"
+    location: 'New York'
 };
 let student2 = {
-    firstName: "Jane",
-    lastName: "Doe",
+    firstName: 'Jane',
+    lastName: 'Doe',
     age: 25,
-    location: "New York"
+    location: 'New York'
 };
 let studentsList = [student1, student2];
-// let table = document.createElement("table");
-// let tableBody = document.createElement("tbody");
+// let table = document.createElement('table');
+// let tableBody = document.createElement('tbody');
 // studentsList.forEach(function (student) {
-//     let row = document.createElement("tr");
-//     let cell = document.createElement("td");
+//     let row = document.createElement('tr');
+//     let cell = document.createElement('td');
 //     let cellText = document.createTextNode(student.firstName);
 //     cell.appendChild(cellText);
 //     row.appendChild(cell);
-//     cell = document.createElement("td");
+//     cell = document.createElement('td');
 //     cellText = document.createTextNode(student.location);
 //     cell.appendChild(cellText);
 //     row.appendChild(cell);
