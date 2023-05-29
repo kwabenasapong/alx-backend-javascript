@@ -9,22 +9,37 @@ followed by the same content as the file 3-read_file_async.js (with and without 
 - the name of the database must be passed as argument of the file
 CSV file can contain empty lines (at the end) - and they are not a valid student! */
 
-const http = require("http");
-const countStudents = require("./3-read_file_async");
+const http = require('http');
+//const countStudents = require('./3-read_file_async');
 
-const app = http.createServer((req, res) => {
-  if (req.url === "/") {
-    res.end("Hello Holberton School!");
-  } else if (req.url === "/students") {
-    res.write("This is the list of our students\n");
-    //use async function and await to get data from promise
-    countStudents(process.argv[2])
-      .then((data) => {
-        res.end(data);
-      }) //if promise is resolved, print data
-      .catch((error) => {
-        res.end(error.message);
-      }); //if promise is rejected, print error message
+/* Using the database database.csv (provided in project description),
+create a function countStudents in the file 3-read_file_async.js
+
+Create a function named countStudents. It should accept a path
+in argument (same as in 2-read_file.js)
+The script should attempt to read the database file asynchronously
+The function should return a Promise
+If the database is not available, it should throw an error with
+the text Cannot load the database
+If the database is available, it should log the following message to
+the console Number of students: NUMBER_OF_STUDENTS
+It should log the number of students in each field, and the list
+with the following format: Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES
+CSV file can contain empty lines (at the end) - and they are not a valid student! */
+
+const fs = require('fs');
+
+const countStudents = require('./3-read_file_async');
+
+const app = http.createServer(async (req, res) => {
+  if (req.url === '/') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello Holberton School!');
+  } else if (req.url === '/students') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.write('This is the list of our students\n');
+    const data = await countStudents(process.argv[2]);
+    res.end(`${data}`);
   }
 });
 
