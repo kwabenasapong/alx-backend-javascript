@@ -10,7 +10,7 @@ followed by the same content as the file 3-read_file_async.js (with and without 
 CSV file can contain empty lines (at the end) - and they are not a valid student! */
 
 const http = require('http');
-//const countStudents = require('./3-read_file_async');
+// const countStudents = require('./3-read_file_async');
 
 /* Using the database database.csv (provided in project description),
 create a function countStudents in the file 3-read_file_async.js
@@ -26,8 +26,6 @@ the console Number of students: NUMBER_OF_STUDENTS
 It should log the number of students in each field, and the list
 with the following format: Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES
 CSV file can contain empty lines (at the end) - and they are not a valid student! */
-
-const fs = require('fs');
 
 const countStudents = require('./3-read_file_async');
 
