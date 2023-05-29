@@ -39,7 +39,7 @@ function countStudents(path) {
         for (const field of Object.keys(fields)) {
           if (field) {
             info += `Number of students in ${field}: ${
-              fields[field].length}.List: ${fields[field].join(', ')}\n`;
+              fields[field].length}. List: ${fields[field].join(', ')}\n`;
           }
         }
         resolve(info);
